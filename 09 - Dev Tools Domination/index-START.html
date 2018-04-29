@@ -11,6 +11,7 @@
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
 
+    // if you inspect this element in the browser and then right click the element itself in the console, you can click the break on option and then select attribute modifications. This will implement debugger on the element and allow you to see any event listeners attached to it.
     function makeGreen() {
       const p = document.querySelector('p');
       p.style.color = '#BADA55';
@@ -18,29 +19,52 @@
     }
 
     // Regular
-
+    console.log('hello');
     // Interpolated
-
+    console.log('Hello I am an %s string!', 'interpolated');
     // Styled
-
+    console.log('%cI am some hacker colored text', 'color: rgb(30,197,3)');
     // warning!
-
+    console.warn('%cOh nooooo! NOOOOOOOO!', 'background: red; color: white;');
     // Error :|
-
+    console.error('%cShit!', 'background: black; color: rgb(30,197,3);');
     // Info
-
+    console.info('Bears beats BattleStar Galactica');
     // Testing
-
+    const p = document.querySelector('p');
+    console.assert(1 === 1, 'That is wrong');
+    console.assert(1 === 2, 'That is wrong');
+    console.assert(p.classList.contains('ouch'), 'No class ouch');
     // clearing
-
+    // console.clear();
     // Viewing DOM Elements
-
+    console.log(p);
+    console.dir(p);
     // Grouping together
-
+    for (const dog of dogs) {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    }
+    
     // counting
-
+    console.count('John');
+    console.count('John');
+    console.count('John');
+    console.count('John');
+    console.count('John');
     // timing
-
+    console.time('fetching data')
+    fetch('https://api.github.com/users/jbonez87')
+      .then(data => data.json())
+      .then(dataJson => {
+        console.timeEnd('fetching data');
+        console.log(dataJson);
+      })
+      .catch(err => console.error(err))
+    console.table(dogs);
   </script>
 </body>
 </html>
