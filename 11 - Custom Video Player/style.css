@@ -63,6 +63,14 @@ body {
   height:30px;
 }
 
+.player__fullscreen {
+  cursor: pointer;
+  background: black;
+  color: white;
+  outline: none;
+  border: none;
+}
+
 .player__controls {
   display:flex;
   position: absolute;
