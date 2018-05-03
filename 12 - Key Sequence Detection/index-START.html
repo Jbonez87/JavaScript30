@@ -10,7 +10,7 @@
   const pressed = [];
   const secret = 'johnny';
 
- window.addEventListener('keyup', e => {
+  window.addEventListener('keyup', e => {
     console.log(e.key);
     pressed.push(e.key);
     pressed.splice(-secret.length -1, pressed.length - secret.length);
@@ -19,7 +19,7 @@
       cornify_add();
     }
     console.log(pressed);
- });
+  });
 </script>
 </body>
 </html>
