@@ -58,6 +58,14 @@ const toggleFullScreen = () => {
   } 
 }
 
+// function requestFullScreen() {
+//   if (document.fullscreenEnabled) {
+//     videoElement.requestFullScreen();
+//   } else {
+//     console.log('Your browser cannot use fullscreen right now');
+//   }
+// }
+
 /* Hook up event listeners */
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
