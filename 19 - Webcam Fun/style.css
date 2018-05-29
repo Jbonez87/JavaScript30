@@ -37,6 +37,21 @@ html {
   width:200px;
 }
 
+.green {
+  padding: 10px;
+  background: white;
+  transition: all .4s;
+  cursor: pointer;
+  outline: none;
+  color: rgb(12, 177, 93);
+  border: 2px solid rgb(12, 177, 93);
+}
+
+.green:hover {
+  background: rgb(12, 177, 93);
+  color: white;
+}
+
 /*
   Strip!
 */
